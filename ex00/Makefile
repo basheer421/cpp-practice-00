@@ -6,7 +6,7 @@
 #    By: bammar <bammar@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/01 01:18:44 by bammar            #+#    #+#              #
-#    Updated: 2023/01/01 01:27:06 by bammar           ###   ########.fr        #
+#    Updated: 2023/02/22 22:16:45 by bammar           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 OBJS	=	$(FILES:.cpp=.o)
 
-.c.o:
+.cpp.o:
 			${CC} ${CFLAGS} -c $< -o ${<:.cpp=.o}
 
 all: 		$(NAME)

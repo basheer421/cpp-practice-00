@@ -6,7 +6,7 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 02:31:36 by bammar            #+#    #+#             */
-/*   Updated: 2023/01/23 15:56:27 by bammar           ###   ########.fr       */
+/*   Updated: 2023/02/22 22:15:52 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void display_10_chars(std::string s)
 			std::cout << s.substr(0, 9) << ".";
 	else
 	{
-		for (int x = 0; x < (10 - s.length()); x++)
+		for (int x = 0; x < (10 - (int)s.length()); x++)
 			std::cout << " ";
 		std::cout << s;
 	}

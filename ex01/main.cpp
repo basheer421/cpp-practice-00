@@ -6,7 +6,7 @@
 /*   By: bammar <bammar@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/01 01:48:39 by bammar            #+#    #+#             */
-/*   Updated: 2023/01/23 15:57:57 by bammar           ###   ########.fr       */
+/*   Updated: 2023/02/22 22:28:13 by bammar           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,6 @@ static void	request_info(t_contact_info &info)
 	std::cin >> info.darkestSecret;
 }
 
-static void	display_contacts()
-{
-	
-}
-
 static void	request_input(PhoneBook &phoneBook)
 {
 	std::string		input;
@@ -63,6 +58,8 @@ static void	request_input(PhoneBook &phoneBook)
 
 	std::cout << "Please Enter a command [ADD, SEARCH, EXIT]: ";
 	std::cin >> input;
+	if (std::cin.good())
+		return ;
 	std::cout << "\n";
 	if (input == "EXIT")
 		return ;
@@ -78,6 +75,8 @@ static void	request_input(PhoneBook &phoneBook)
 		phoneBook.displayAllContacts();
 		std::cout << "Choose the index of the contact you want to display: ";
 		std::cin >> index;
+		if (std::cin.good())
+			return ;
 		std::cout << "\n";
 		if (index  >= phoneBook.getCurrentSize() || index < 0)
 			std::cout << "Choose within the given range please.\n";
